@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Guide: Talenta Mekari, JobStreet & Talent Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0d6efd;
+            --secondary: #6c757d;
+            --success: #198754;
+            --danger: #dc3545;
+            --warning: #ffc107;
+            --info: #0dcaf0;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --brand-blue: #0057a3;
+            --brand-green: #198754;
+            --brand-orange: #fd7e14;
+            --gradient-blue: linear-gradient(135deg, #0d6efd, #0057a3);
+            --gradient-green: linear-gradient(135deg, #198754, #0d5d3f);
+            --gradient-orange: linear-gradient(135deg, #fd7e14, #e85d04);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            background-color: #f8fafc;
+            line-height: 1.7;
+        }
+        
+        .header-font {
+            font-family: 'Merriweather', serif;
+        }
+        
+        .hero {
+            background: var(--gradient-blue);
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(30deg);
+        }
+        
+        .section-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+        }
+        
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .section-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .feature-card {
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .feature-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+        
+        .feature-icon {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .comparison-table {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+        
+        .nav-pills .nav-link {
+            border-radius: 8px;
+            padding: 0.8rem 1.5rem;
+            margin: 0.5rem 0.3rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            color: var(--dark);
+            background: var(--light);
+        }
+        
+        .nav-pills .nav-link.active {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+        }
+        
+        .diagram-container {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid #e9ecef;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+            margin: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 1.1rem;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: var(--primary);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -2.2rem;
+            top: 0.3rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px var(--primary);
+        }
+        
+        .timeline-date {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .conclusion-box {
+            background: linear-gradient(135deg, #e6f7ff, #d1ecff);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 2rem 0;
+        }
+        
+        .badge-custom {
+            border-radius: 50px;
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .section-card {
+                padding: 1.5rem;
+            }
+            
+            .hero {
+                padding: 2.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="fas fa-book me-2"></i>
+                <span class="fw-bold">Riset sederhana</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#talenta">Talenta Mekari</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#jobstreet">JobStreet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#talent-management">Talent Management</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold header-font mb-3">Artikel Sederhana</h1>
+                    <p class="lead mb-4">Explore Talenta Mekari, JobStreet, and Talent Management strategies to optimize your HR processes and talent acquisition</p>
+                    <div class="d-flex justify-content-center flex-wrap">
+                        <span class="badge bg-light text-dark badge-custom me-2 mb-2">
+                            <i class="fas fa-user-friends me-1"></i> HRIS
+                        </span>
+                        <span class="badge bg-light text-dark badge-custom me-2 mb-2">
+                            <i class="fas fa-search-dollar me-1"></i> Recruitment
+                        </span>
+                        <span class="badge bg-light text-dark badge-custom me-2 mb-2">
+                            <i class="fas fa-chart-line me-1"></i> Talent Strategy
+                        </span>
+                        <span class="badge bg-light text-dark badge-custom me-2 mb-2">
+                            <i class="fas fa-code me-1"></i> Laravel
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Talenta Mekari Section -->
+        <section id="talenta" class="section-card">
+            <div class="d-flex align-items-center mb-4">
+                <i class="fas fa-cloud section-icon me-3"></i>
+                <h2 class="section-title mb-0">Talenta Mekari: HRIS Cloud Solution</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-info-circle feature-icon me-3"></i>
+                            <h3 class="h5 mb-0">Definisi & Fungsi</h3>
+                        </div>
+                        <p><strong>Talenta oleh Mekari</strong> adalah Human Resource Information System (HRIS) berbasis cloud yang menyatukan proses HR—mulai dari pengelolaan database karyawan, absensi & penjadwalan, penggajian, hingga HR analytics.</p>
+                        <div class="mt-3">
+                            <h4 class="h6">Fungsi Utama:</h4>
+                            <ul>
+                                <li>Automasi operasional HR (absensi, cuti, lembur, payroll)</li>
+                                <li>Memastikan kepatuhan (PPh 21, BPJS) secara konsisten</li>
+                                <li>Memberi akses mandiri karyawan (ESS) via aplikasi</li>
+                                <li>Sentralisasi data & laporan real-time</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-star feature-icon me-3"></i>
+                            <h3 class="h5 mb-0">Kelebihan</h3>
+                        </div>
+                        <ul>
+                            <li>Automasi menyeluruh mengurangi pekerjaan manual & human error</li>
+                            <li>Data real-time untuk keputusan cepat</li>
+                            <li>Mobile-first & ESS meningkatkan pengalaman karyawan</li>
+                            <li>Keamanan & kepatuhan (audit trail, kontrol akses)</li>
+                            <li>Ekosistem terintegrasi</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-cogs feature-icon me-3"></i>
+                            <h3 class="h5 mb-0">Fitur-Fitur Utama</h3>
+                        </div>
+                        <ul>
+                            <li><strong>Payroll Otomatis:</strong> Kalkulasi gaji, lembur, tunjangan, PPh 21 & BPJS</li>
+                            <li><strong>Absensi & Penjadwalan:</strong> Mobile (geolokasi), integrasi fingerprint, shift/rota</li>
+                            <li><strong>HRIS:</strong> Data karyawan terpusat, struktur organisasi</li>
+                            <li><strong>Employee Self-Service (ESS):</strong> Pengajuan cuti, lembur, perubahan data</li>
+                            <li><strong>Performance & Goals:</strong> KPI/OKR, review kinerja, feedback 360°</li>
+                            <li><strong>Analytics & Laporan:</strong> Dashboard HR, tren kehadiran, biaya tenaga kerja</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-exclamation-triangle feature-icon me-3"></i>
+                            <h3 class="h5 mb-0">Kekurangan / Pertimbangan</h3>
+                        </div>
+                        <ul>
+                            <li>Biaya berlangganan bisa memberatkan UKM tertentu</li>
+                            <li>Butuh adaptasi/proses perubahan (change management) awal</li>
+                            <li>Ketergantungan koneksi internet (cloud)</li>
+                            <li>Integrasi dengan tool khusus mungkin perlu penyesuaian</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="conclusion-box mt-4">
+                <h4 class="fw-bold mb-3"><i class="fas fa-lightbulb me-2"></i>Kesimpulan Talenta Mekari</h4>
+                <p class="mb-0">Talenta Mekari sangat penting bagi perusahaan yang ingin mengotomatisasi proses HR secara menyeluruh. Dengan solusi cloud yang terintegrasi, organisasi dapat meningkatkan efisiensi, mengurangi kesalahan manual, dan memastikan kepatuhan regulasi. Cocok untuk perusahaan bertumbuh yang membutuhkan skalabilitas sistem HR.</p>
+            </div>
+        </section>
+        
+        <!-- JobStreet Section -->
+        <section id="jobstreet" class="section-card">
+            <div class="d-flex align-items-center mb-4">
+                <i class="fas fa-briefcase section-icon me-3"></i>
+                <h2 class="section-title mb-0">JobStreet: Recruitment Platform</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-history feature-icon me-3"></i>
+                            <h3 class="h5 mb-0">Sejarah Singkat</h3>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">1997</div>
+                                <p>Didirikan di Malaysia oleh Mark Chang Mun Kee</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">1999</div>
+                                <p>Mendapat pendanaan ventura dan berekspansi kawasan</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2004</div>
+                                <p>IPO di Bursa Malaysia</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2014</div>
+                                <p>Diakuisisi penuh oleh SEEK Limited</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">2024</div>
+                                <p>Penggabungan JobStreet, JobsDB, dan SEEK menjadi platform rekrutmen berbasis AI terpadu</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-users feature-icon me-3"></i>
+                            <h3 class="h5 mb-0">Fungsi untuk Pencari Kerja</h3>
+                        </div>
+                        <ul>
+                            <li>Mencari lowongan sesuai profil & preferensi</li>
+                            <li>Mengunggah/menyusun CV & profil yang bisa ditemukan rekruter</li>
+                            <li>Job alert & rekomendasi otomatis berbasis kecocokan</li>
+                            <li>Melamar dan melacak status aplikasi secara real-time</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-building feature-icon me-3"></i>
+                            <h3 class="h5 mb-0">Fungsi untuk Perusahaan</h3>
+                        </div>
+                        <ul>
+                            <li>Memasang lowongan, menyaring kandidat, dan mengelola pipeline</li>
+                            <li>Membangun employer branding melalui profil perusahaan & ulasan</li>
+                            <li>Analitik pasar talenta dan efisiensi proses rekrutmen</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-chart-bar feature-icon me-3"></i>
+                            <h3 class="h5 mb-0">Analisis Kelebihan & Kekurangan</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="h6">Kelebihan</h4>
+                                <ul>
+                                    <li>Basis pengguna & jangkauan regional besar</li>
+                                    <li>Proses melamar & menyaring kandidat efisien</li>
+                                    <li>Transparansi lewat ulasan perusahaan</li>
+                                    <li>Rekomendasi cerdas meningkatkan kecocokan</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="h6">Kekurangan</h4>
+                                <ul>
+                                    <li>Persaingan pelamar tinggi di posisi populer</li>
+                                    <li>Ketergantungan koneksi & literasi digital</li>
+                                    <li>Fitur tertentu (premium) berbayar bagi perusahaan</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h4 class="mt-4 mb-3">Perbandingan Model Outsourcing Recruitment</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Keunggulan</th>
+                            <th>Risiko</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Onshore</strong><br>(dalam negeri)</td>
+                            <td>Bahasa & budaya sama</td>
+                            <td>Biaya relatif tinggi</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nearshore</strong><br>(negara tetangga)</td>
+                            <td>Zona waktu berdekatan</td>
+                            <td>Keterbatasan vendor</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Offshore</strong><br>(lintas benua)</td>
+                            <td>Biaya paling efisien</td>
+                            <td>Kendala komunikasi</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="conclusion-box mt-4">
+                <h4 class="fw-bold mb-3"><i class="fas fa-lightbulb me-2"></i>Kesimpulan JobStreet</h4>
+                <p class="mb-0">JobStreet telah menjadi platform rekrutmen terkemuka di Asia Tenggara yang menghubungkan jutaan pencari kerja dengan perusahaan. Dengan fitur AI dan analitik terbaru, platform ini terus berevolusi untuk memenuhi kebutuhan pasar tenaga kerja yang dinamis. Cocok untuk perusahaan yang ingin memperluas jangkauan rekrutmen dan meningkatkan efisiensi proses hiring.</p>
+            </div>
+        </section>
+        
+        <!-- Talent Management Section -->
+        <section id="talent-management" class="section-card">
+            <div class="d-flex align-items-center mb-4">
+                <i class="fas fa-chart-line section-icon me-3"></i>
+                <h2 class="section-title mb-0">Talent Management & Development</h2>
+            </div>
+            
+            <ul class="nav nav-pills mb-4 justify-content-center" id="talentTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="talent-tab" data-bs-toggle="pill" data-bs-target="#talent" type="button" role="tab">
+                        <i class="fas fa-user-tie me-2"></i>Talent Management
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="outsourcing-tab" data-bs-toggle="pill" data-bs-target="#outsourcing" type="button" role="tab">
+                        <i class="fas fa-handshake me-2"></i>Outsourcing
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="laravel-tab" data-bs-toggle="pill" data-bs-target="#laravel" type="button" role="tab">
+                        <i class="fas fa-code me-2"></i>Laravel Framework
+                    </button>
+                </li>
+            </ul>
+            
+            <div class="tab-content" id="talentTabsContent">
+                <!-- Talent Management Tab -->
+                <div class="tab-pane fade show active" id="talent" role="tabpanel">
+                    <h3 class="h4 mb-3">Strategi Manajemen Bakat</h3>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-bullseye feature-icon me-3"></i>
+                                    <h4 class="h5 mb-0">Komponen Utama</h4>
+                                </div>
+                                <ul>
+                                    <li><strong>Perencanaan & Identifikasi Bakat:</strong> Menentukan kebutuhan talenta berdasarkan strategi perusahaan</li>
+                                    <li><strong>Rekrutmen & Seleksi:</strong> Menarik kandidat terbaik yang sesuai dengan budaya perusahaan</li>
+                                    <li><strong>Pengembangan & Pelatihan:</strong> Memberikan pelatihan, mentoring, dan kesempatan pengembangan karir</li>
+                                    <li><strong>Retensi:</strong> Menciptakan lingkungan kerja yang mendukung dan memotivasi</li>
+                                    <li><strong>Suksesi & Kepemimpinan:</strong> Mempersiapkan pemimpin masa depan melalui program suksesi</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-trophy feature-icon me-3"></i>
+                                    <h4 class="h5 mb-0">Manfaat Utama</h4>
+                                </div>
+                                <ul>
+                                    <li>Meningkatkan produktivitas dan kinerja perusahaan</li>
+                                    <li>Mengurangi turnover karyawan</li>
+                                    <li>Membangun budaya perusahaan yang kuat</li>
+                                    <li>Mempersiapkan perusahaan untuk menghadapi perubahan bisnis</li>
+                                    <li>Menjadikan perusahaan lebih menarik bagi talenta terbaik</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h4 class="mt-4 mb-3">Contoh Penerapan Talent Management</h4>
+                    <div class="table-responsive">
+                        <table class="table table-bordered comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Program</th>
+                                    <th>Manfaat</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Program magang & rekrutmen lulusan terbaik</strong></td>
+                                    <td>Membangun pipeline talenta sejak dini</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Pelatihan kepemimpinan untuk manajer</strong></td>
+                                    <td>Mempersiapkan pemimpin masa depan</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sistem penilaian kinerja berbasis kompetensi</strong></td>
+                                    <td>Mengukur perkembangan karyawan secara objektif</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Rencana penggantian posisi kunci</strong></td>
+                                    <td>Memastikan kelangsungan bisnis</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Outsourcing Tab -->
+                <div class="tab-pane fade" id="outsourcing" role="tabpanel">
+                    <h3 class="h4 mb-3">Strategi Outsourcing</h3>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-globe feature-icon me-3"></i>
+                                    <h4 class="h5 mb-0">Jenis-Jenis Outsourcing</h4>
+                                </div>
+                                <ul>
+                                    <li><strong>IT Outsourcing:</strong> Pengembangan software, maintenance server, helpdesk TI</li>
+                                    <li><strong>Manufacturing Outsourcing:</strong> Produksi komponen, perakitan produk</li>
+                                    <li><strong>Business Process Outsourcing (BPO):</strong> Call center, HR & Payroll, akuntansi</li>
+                                    <li><strong>Knowledge Process Outsourcing (KPO):</strong> Riset pasar, analisis data, pengembangan konten</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-cogs feature-icon me-3"></i>
+                                    <h4 class="h5 mb-0">Proses Implementasi</h4>
+                                </div>
+                                <ol>
+                                    <li><strong>Analisis Kebutuhan:</strong> Identifikasi fungsi yang akan di-outsource</li>
+                                    <li><strong>Seleksi Vendor:</strong> Evaluasi kemampuan dan rekam jejak</li>
+                                    <li><strong>Negosiasi Kontrak:</strong> SLA, harga, dan termin pembayaran</li>
+                                    <li><strong>Transisi:</strong> Alih pengetahuan dan sistem</li>
+                                    <li><strong>Monitoring:</strong> Evaluasi kinerja berkala</li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-chart-pie feature-icon me-3"></i>
+                                    <h4 class="h5 mb-0">Manfaat Outsourcing</h4>
+                                </div>
+                                <ul>
+                                    <li><strong>Penghematan Biaya:</strong> Hingga 30-50% dibanding rekrutmen internal</li>
+                                    <li><strong>Fleksibilitas Operasional:</strong> Skalabilitas sesuai kebutuhan bisnis</li>
+                                    <li><strong>Akses Keahlian Global:</strong> Memanfaatkan talenta terbaik dunia</li>
+                                    <li><strong>Fokus pada Core Business:</strong> Mengalihkan fungsi non-inti ke pihak ahli</li>
+                                    <li><strong>Akses Teknologi Terkini:</strong> Tanpa investasi besar di infrastruktur</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Laravel Tab -->
+                <div class="tab-pane fade" id="laravel" role="tabpanel">
+                    <h3 class="h4 mb-3">Laravel Framework untuk Sistem HR</h3>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fab fa-laravel feature-icon me-3"></i>
+                                    <h4 class="h5 mb-0">Apa itu Laravel?</h4>
+                                </div>
+                                <p>Laravel adalah framework PHP open-source yang dirancang untuk mempermudah pengembangan aplikasi web dengan sintaks yang elegan dan ekspresif. Dibuat oleh Taylor Otwell pada 2011, Laravel kini menjadi salah satu framework PHP paling populer di dunia.</p>
+                                
+                                <h5 class="mt-3">Filosofi Laravel:</h5>
+                                <ul>
+                                    <li><strong>"Developer Happiness":</strong> Membuat pengembangan web menyenangkan</li>
+                                    <li><strong>Convention over Configuration:</strong> Mengurangi keputusan yang tidak perlu</li>
+                                    <li><strong>Expressive Syntax:</strong> Kode yang mudah dibaca dan dipahami</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-star feature-icon me-3"></i>
+                                    <h4 class="h5 mb-0">Fitur Utama Laravel</h4>
+                                </div>
+                                <ul>
+                                    <li><strong>Eloquent ORM:</strong> Sistem ORM (Object-Relational Mapping) terbaik di PHP</li>
+                                    <li><strong>Blade Templating Engine:</strong> Sistem templating yang powerful</li>
+                                    <li><strong>Artisan CLI:</strong> Command Line Interface untuk otomatisasi</li>
+                                    <li><strong>Routing yang Ekspresif:</strong> Mendefinisikan route dengan sintaks intuitif</li>
+                                    <li><strong>Middleware:</strong> Filter HTTP untuk autentikasi dan otorisasi</li>
+                                    <li><strong>Migrations & Seeding:</strong> Mengelola database dengan mudah</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-balance-scale feature-icon me-3"></i>
+                                    <h4 class="h5 mb-0">Perbandingan Framework PHP</h4>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered comparison-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Framework</th>
+                                                <th>Keunggulan</th>
+                                                <th>Kekurangan</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Laravel</strong></td>
+                                                <td>Sintaks elegan, ekosistem lengkap</td>
+                                                <td>Kurang cocok untuk microservices</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>CodeIgniter</strong></td>
+                                                <td>Ringan, mudah dipelajari</td>
+                                                <td>Fitur terbatas</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Symfony</strong></td>
+                                                <td>Modular, enterprise-ready</td>
+                                                <td>Kurva belajar curam</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Yii</strong></td>
+                                                <td>Performa tinggi</td>
+                                                <td>Komunitas kecil</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-laptop-code feature-icon me-3"></i>
+                                    <h4 class="h5 mb-0">Contoh Kode Laravel</h4>
+                                </div>
+                                <pre class="p-3 bg-dark text-light rounded">// Mendefinisikan route
+Route::get('/user', [UserController::class, 'index']);
+
+// Query dengan Eloquent ORM
+$users = User::where('active', 1)
+             ->orderBy('name')
+             ->take(10)
+             ->get();
+
+// Blade template
+@foreach ($users as $user)
+    &lt;li>{{ $user->name }}&lt;/li>
+@endforeach</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="conclusion-box mt-4">
+                <h4 class="fw-bold mb-3"><i class="fas fa-lightbulb me-2"></i>Kesimpulan Talent Management</h4>
+                <p class="mb-0">Manajemen bakat yang efektif sangat penting bagi perusahaan untuk tetap kompetitif. Dengan mengelola talenta secara strategis, organisasi dapat memastikan bahwa mereka memiliki SDM yang berkualitas, siap menghadapi tantangan bisnis, dan mencapai tujuan jangka panjang. Outsourcing dapat menjadi strategi efektif untuk fungsi non-inti, sementara teknologi seperti Laravel membantu membangun sistem HR yang efisien dan scalable.</p>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-3">Riset sederhana</h5>
+                    <p>Komprehensif panduan untuk solusi HR modern dan strategi manajemen talenta.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-3">Navigasi</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#talenta" class="text-white">Talenta Mekari</a></li>
+                        <li class="mb-2"><a href="#jobstreet" class="text-white">JobStreet</a></li>
+                        <li class="mb-2"><a href="#talent-management" class="text-white">Talent Management</a></li>
+                        <a href="https://www.talenta.co/" target="_blank" style="padding:10px 20px; background-color:#007bff; color:white; text-decoration:none; border-radius:5px;">Talenta</a>
+                        <a href="https://id.jobstreet.com/" target="_blank" style="padding:10px 20px; background-color:#28a745; color:white; text-decoration:none; border-radius:5px;">JobStreet</a>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Kontak</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@hrtalentguide.com</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +62 123 4567 890</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Bandung, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">© Riset sederhana. Hak Cipta Dilindungi.</p>
+                <p>Penulis: Agus | Terakhir diperbarui: 14 Agustus 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Activate tab when navigating from another page
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlHash = window.location.hash;
+            if (urlHash) {
+                const tab = document.querySelector(`.nav-link[href="${urlHash}"]`);
+                if (tab) {
+                    new bootstrap.Tab(tab).show();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
